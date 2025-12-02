@@ -22,6 +22,11 @@ class Solution:
             1,   2,   3,   4,   5,   6
             0,  4,  10,  21
 
+            head -> None 
+            tail
+
+            1st occurence -> head -> 
+
             left merger
                 left >= right , right is empty : left -> left.next
                 right > left, left is empty:  rightNode extract , right = right.next, rightNode join left chain(frontside in leftNode)  
@@ -33,36 +38,40 @@ class Solution:
         right = list2
 
         head: ListNode | None 
-        
-        while left != None or right != None:
-            # print()
-            if left != None and right != None:
+        tail: ListNode | None = None
+        if left != None and right != None:
                 if left.val <= right.val:
                     current = left
                     left = left.next
-                    head.next = current
-                    print(current, head, left, right)
                     head = current
                 else:
                     current = right
                     right = right.next
-                    current.next = head
                     head = current
-                    
+                head.next = None
+                tail = head
+        elif left == None: return right
+        else: return left
+
+        while left != None or right != None:
+            print(left, right, head, tail)
+            if left != None and right != None:
+                if left.val <= right.val:
+                    current = left
+                    left = left.next
+                    tail.next = current
+                else:
+                    current = right
+                    right = right.next
+                    tail.next = current
+                tail = current
+                tail.next = None
             elif left == None:
-                if head != None:
-                    head.next = right
-                else:
-                    head = right
+                tail.next = right
                 break
-
-            elif right == None:
-                if head != None:
-                    head.next = left
-                else:
-                    head = left
+            else:
+                tail.next = left
                 break
-
         return head
 
 
