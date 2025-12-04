@@ -29,4 +29,3 @@ class Solution:
             if fast_pointer == None: break
             fast_pointer = fast_pointer.next
         return False
-
