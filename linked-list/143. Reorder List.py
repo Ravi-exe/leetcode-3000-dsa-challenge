@@ -8,10 +8,23 @@ class ListNode:
         self.val = val
         self.next = next
 
+    def __str__(self):
+        string = ""
+        current = self
+        while current:
+            string += str(current.val)
+            current = current.next
+        return string
+
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         """
             1, 2, 3, 4, 5, 6, 7, 8, 9
+
+            1,2,3,4,5 
+            1,3,5,7,9 
+
+            
 
             for 2 times scanning method=> 
 
@@ -45,44 +58,59 @@ class Solution:
         if head == None: return None
 
         slow = head
-        fast = slow.next
-        if fast == None: return None
-        fast = fast.next
+        fast = slow
+        # if fast == None: return None
+        # fast = fast.next
         # if fast == None:  return None
         
         # current: ListNode | None = None
         found_last_node = False
         arr: List[ListNode] = []
+        current: ListNode | None = None
 
         while slow != None:
-        
-            if found_last_node == False:
-                node = fast.next 
-                if node == None: # even
+            if found_last_node == False: 
+                print(found_last_node,slow, arr)
+                if fast == None: # even
                     found_last_node = True
-                elif node.next == None: # odd
+                elif fast.next == None: # odd
                     found_last_node = True
-                    # current = fast
+                    current=slow
+                    slow=slow.next
+                    current.next = None
+                    # fast = node.next
+                else:
+                    fast = fast.next.next
+                    arr.append(slow)
+                    slow = slow.next
             else:
+                # print(found_last_node,slow, arr)
+                nextNode = slow.next
                 node = arr.pop()
                 node.next = slow
-                slow.next = fast
-                fast = node
-                
-            arr.append(slow)
-            slow = slow.next
-            print()
+                slow.next = current
+                current = node
+                slow = nextNode
 
-alterele1st = ListNode(val=4)
-alterele2st = ListNode(val=5)
-alterele3st = ListNode(val=6)
-alterele1st.next = alterele2st
-alterele2st.next = alterele3st
-alterele3st.next = None
 
-print("listnode", alterele1st)
+alterele_1 = ListNode(val=1)
+alterele_2 = ListNode(val=2)
+alterele_3 = ListNode(val=3)
+alterele_4 = ListNode(val=4)
+alterele_5 = ListNode(val=5)
+alterele_6 = ListNode(val=6)
+alterele_7 = ListNode(val=7)
+
+alterele_1.next = alterele_2
+alterele_2.next = alterele_3
+alterele_3.next = alterele_4
+alterele_4.next = alterele_5
+alterele_5.next = alterele_6
+alterele_6.next = alterele_7
+alterele_7.next = None
+
+print("listnode", alterele_1)
 solution = Solution()
-result = solution.reorderList(alterele1st)
-print(result)
-
+result = solution.reorderList(alterele_1)
+print("reordered", alterele_1)
 
