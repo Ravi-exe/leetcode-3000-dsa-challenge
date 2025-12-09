@@ -2,3 +2,6 @@ valid anagram \ pending for upload
 encode decode strings \ pending for upload \ optimization pending
 
 copy linkedlist with random pointer pending
+
+min stack problem pending
+valid parenthses optimization pending
