@@ -1,7 +1,7 @@
-valid anagram \ pending for upload 
-encode decode strings \ pending for upload \ optimization pending
+valid anagram \ pending for upload to leetcode
+encode decode strings \ pending for upload \ optimization pending for upload
 
 copy linkedlist with random pointer pending
 
-min stack problem pending
+min stack problem embedding solution need to study deeper
 valid parenthses optimization pending
