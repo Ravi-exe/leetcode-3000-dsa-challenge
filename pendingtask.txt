@@ -5,4 +5,3 @@ copy linkedlist with random pointer pending
 
 min stack problem embedding solution need to study deeper
 valid parenthses optimization pending
-Evaluate Reverse Polish Notation solution pending
