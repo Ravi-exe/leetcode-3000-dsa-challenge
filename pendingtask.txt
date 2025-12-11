@@ -5,3 +5,5 @@ copy linkedlist with random pointer pending
 
 min stack problem embedding solution need to study deeper
 valid parenthses optimization pending
+
+daily temperature problem pending
