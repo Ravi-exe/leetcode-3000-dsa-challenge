@@ -13,3 +13,5 @@ group anagram optimization pending
 largets histogram rectangle pending
 
 top k frequant optimization pending
+
+product of array except self optimization pending
