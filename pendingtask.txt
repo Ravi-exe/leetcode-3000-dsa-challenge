@@ -15,3 +15,5 @@ largets histogram rectangle pending
 top k frequant optimization pending
 
 product of array except self optimization pending
+
+longest consective number optimization pending
