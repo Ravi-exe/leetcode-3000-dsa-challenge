@@ -1,19 +1,24 @@
 valid anagram \ pending for upload to leetcode
 encode decode strings \ pending for upload \ optimization pending for upload
 
-copy linkedlist with random pointer pending
+copy linkedlist with random pointer solution pending
 
 min stack problem embedding solution need to study deeper
+
 valid parenthses optimization pending
 
 daily temperature optimization pending
 
 group anagram optimization pending
 
-largets histogram rectangle pending
+largets histogram rectangle solution pending
 
 top k frequant optimization pending
 
 product of array except self optimization pending
 
 longest consective number optimization pending
+
+3sum optimization pending
+
+Container with most water solution pending
