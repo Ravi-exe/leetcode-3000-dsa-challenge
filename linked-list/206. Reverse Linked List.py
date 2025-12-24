@@ -20,7 +20,7 @@ class Solution:
         
         # if nextNode == None: return head
         while currentNode != None:
-            nextNode = nextNode.next
+            nextNode = nextNode.next # type: ignore
             currentNode.next = prevNode
             prevNode = currentNode
             currentNode = nextNode
