@@ -22,3 +22,5 @@ longest consective number optimization pending
 3sum optimization pending
 
 Container with most water solution pending
+
+merge k sorted list solution pending
