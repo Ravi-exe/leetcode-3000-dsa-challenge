@@ -24,3 +24,9 @@ longest consective number optimization pending
 Container with most water solution pending
 
 merge k sorted list solution pending
+
+Find Minimum in Rotated Sorted Array solution pending
+
+longest repeating character replacement solution pending
+
+minimum window substring  solution pending
